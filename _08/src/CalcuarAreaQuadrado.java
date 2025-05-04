@@ -5,7 +5,9 @@ public class CalcuarAreaQuadrado
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        Quadrado quadradoX, quadradoY;
+        Quadrado quadradoX, quadradoY; // define as variáveis que serão utilizadas para referenciar os objetos
+
+        // criação dos objetos:
         quadradoX = new Quadrado();
         quadradoY = new Quadrado();
 
@@ -19,8 +21,8 @@ public class CalcuarAreaQuadrado
         System.out.print("Digite a largura do segundo quadrado: ");
         quadradoY.largura = sc.nextDouble();
 
-        double areaX = quadradoX.altura * quadradoX.largura;
-        double areaY = quadradoY.altura * quadradoY.largura;
+        double areaX = quadradoX.area();
+        double areaY = quadradoY.area();
 
         System.out.print("Area do primeiro quadrado: "+areaX);
         System.out.println(", Area do segundo quadrado: "+areaY);
