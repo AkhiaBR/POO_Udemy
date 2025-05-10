@@ -13,14 +13,21 @@ public class Program
         System.out.print("Digite o nome do produto: ");
         product.name = sc.nextLine();
         System.out.print("Digite o preço do produto: ");
-        product.price = sc.nextDouble();
+        product.price = Double.parseDouble(sc.nextLine());
         System.out.print("Digite o quantidade do produto: ");
-        product.quantity = sc.nextInt();
+        product.quantity = Integer.parseInt(sc.nextLine());
 
-        System.out.print("Nome do produto: "+product.name);
-        System.out.print(", Preço do produto: "+product.price);
-        System.out.print(", Quantidade do produto: "+product.quantity);
-        System.out.println(", Valor total do produto: "+product.TotalValueInStock());
+        System.out.println("Product data: "+product);
+
+        System.out.print("Enter the number of products to be added in stock: ");
+        int quantity = Integer.parseInt(sc.nextLine());
+        product.addProductsQuantity(quantity);
+        System.out.println("Updated product data: "+product);
+
+        System.out.print("Enter the number of products to be removed in stock: ");
+        quantity = Integer.parseInt(sc.nextLine());
+        product.removeProductsQuantity(quantity);
+        System.out.println("Updated product data: "+product);
 
         sc.close();
     }
